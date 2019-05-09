@@ -1,0 +1,15 @@
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector.csprojAssemblyReference.cache
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\App.g.cs
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector_MarkupCompile.cache
+C:\Users\Leandro\source\repos\Corrector\Corrector\bin\Debug\Corrector.exe.config
+C:\Users\Leandro\source\repos\Corrector\Corrector\bin\Debug\Corrector.exe
+C:\Users\Leandro\source\repos\Corrector\Corrector\bin\Debug\Corrector.pdb
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\MainWindow.g.cs
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector_MarkupCompile.lref
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\MainWindow.baml
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector.g.resources
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector.Properties.Resources.resources
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector.csproj.GenerateResource.cache
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector.csproj.CoreCompileInputs.cache
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector.exe
+C:\Users\Leandro\source\repos\Corrector\Corrector\obj\Debug\Corrector.pdb

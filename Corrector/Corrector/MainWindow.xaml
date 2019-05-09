@@ -1,0 +1,90 @@
+﻿<Window x:Class="Corrector.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Corrector"
+        mc:Ignorable="d"
+        Title="Editor de texto" Height="450" Width="800">
+    <Grid>
+        <!--Esto es la barra de botones-->
+        <!--Este es un DOckPanel, con esta funcion agruparemos todos los botones de nuestro programa -->
+        <DockPanel HorizontalAlignment="Left" Height="30" LastChildFill="False" Margin="10,0,0,0" VerticalAlignment="Top" Width="774" Grid.ColumnSpan="2">
+            <!--Boton 1 Guardar, Nombre de la variable Guardar-->
+            <Button x:Name="Abrir" Margin="0,0,0,0.4" Width="33" Click="Abrir_Click">
+                <Image Source=" Iconos/Nuevo.png" ToolTip="Nuevo"></Image>
+            </Button>
+
+            <!--Grid Realiza la funcion de separador en un proyecto en c#-->
+            <Grid>
+                <GridSplitter ShowsPreview="True" Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" Margin="0,0,-0.2,0.4" />
+            </Grid>
+
+            <!-- Boton Guardar-->
+            <Button x:Name="Guardar" Margin="0,0,0,0.4" Width="42" Click="Guardar_Click">
+                <Image Source="Iconos/guardar.png" ToolTip="Guardar"></Image>
+            </Button>
+
+            <!--Separador-->
+            <Grid>
+                <GridSplitter ShowsPreview="True" Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
+            </Grid>
+            <!--Boton Nuevo Archivo-->
+            <Button x:Name="Nuevo" Click="Nuevo_Click">
+                <Image Source="Iconos/Abrir.png" Width="42" ToolTip="Abrir"/>
+            </Button>
+            <Button x:Name="Imprimir" Click="Imprimir_Click" Margin="0,0,0,0.4" Width="39">
+                <Image Source="Iconos/Printer.png" ToolTip="Imprimir"></Image>
+            </Button>
+            <!--Hace la funcion de separador-->
+            <Grid Margin="0,0,0,0.4" Width="138">
+                <GridSplitter ShowsPreview="True" Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
+            </Grid>
+
+            <!--Boton para linear el textp-->
+            <Button x:Name="AlinearIzquierda" Click="AlinearIzquierda_Click" >
+
+                <Image Source=" Iconos/Aliear-izquierda.png" ToolTip="Alinear a la izquierda"></Image>
+            </Button>
+            <!--Separador-->
+            <Grid>
+                <GridSplitter ShowsPreview="True" Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
+            </Grid>
+            <!--Boton Alinear a la Derecha-->
+            <Button x:Name="AlinearDerecha" Click="AlinearDerecha_Click" ToolTip="Alinear a la derecha">
+                <Image Source="Iconos/Alinear-derecha.png"></Image>
+            </Button>
+            <!--Separador-->
+            <Grid>
+                <GridSplitter ShowsPreview="True" Width="5" HorizontalAlignment="Right" VerticalAlignment="Stretch" />
+            </Grid>
+            <!--Boton Para Justificar-->
+            <Button x:Name="JustificarTexto" Click="JustificarTexto_Click" ToolTip="Centralizar" >
+                <Image Source=" Iconos/Justificar.png"></Image>
+            </Button>
+
+        </DockPanel>
+
+        <!--Tamaño de la Fuente a utilizar-->
+        <ComboBox x:Name="NumeroTamaño" HorizontalAlignment="Left" Margin="505,0,0,0" VerticalAlignment="Top" Width="46" Height="30" SelectionChanged="SelectionNumeroTamaño_SelectionChanged" Text=""  ManipulationCompleted="NumeroTamaño_ManipulationCompleted_1" ContextMenuClosing="NumeroTamaño_ContextMenuClosing" MouseEnter="NumeroTamaño_MouseEnter" MouseLeave="NumeroTamaño_MouseLeave"/>
+
+        <!--Tipo de fuente a utilizar-->
+        <ComboBox x:Name="Fuente" HorizontalAlignment="Left" Margin="607,0,0,0" VerticalAlignment="Top" Width="177" Height="30" Text="Arial" SelectionChanged="Fuente_SelectionChanged" />
+        <!--Etiqueta-->
+        <Label Content="Tamaño" HorizontalAlignment="Left" Margin="432,4,0,0" VerticalAlignment="Top"/>
+
+        <!--Etiqueta-->
+        <Label Content="Fuente" HorizontalAlignment="Left" Margin="556,4,0,0" VerticalAlignment="Top"/>
+        <!--Final de la Barra-->
+
+        <!--Textbox, donde se colocan los datos de texto y cuenta la cantidad de letras escritas-->
+        <TextBox x:Name="Editor" HorizontalAlignment="Left" Height="275" Margin="31,115,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="723"  SpellCheck.IsEnabled="True" xml:lang="es" TextChanged="Editor_TextChanged" KeyUp="Editor_KeyUp" 
+                 FontFamily="{Binding ElementName=Letras}" FontWeight="{Binding ElementName=Fuente,Path=SelectedValue.Weight}"
+                 FontStretch="{Binding ElementName=Fuente,Path=SelectedValue.Stretch}" 
+                 FontStyle="{Binding ElementName=Fuente,Path=SelectedValue.Style}"/>
+        <TextBox x:Name="Letras" Height="21" Margin="159,89,551.6,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top"/>
+        <Label Content="Cantidad de letras" HorizontalAlignment="Left" Margin="32,89,0,0" VerticalAlignment="Top"/>
+        <!--Final del TextBox-->
+
+    </Grid>
+</Window>
